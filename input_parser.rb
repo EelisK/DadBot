@@ -2,7 +2,6 @@ require 'enumerator'
 require_relative 'string_util'
 
 class InputParser
-
   # Add string utilities
   include StringUtil
 
@@ -11,7 +10,7 @@ class InputParser
 
   def initialize(input)
     # Replace multiple consecutive whitespaces with single ones
-    @input = single_whitespace(input).downcase.strip
+    @input = single_whitespace(input || "").downcase.strip
   end
 
   def pun_material
